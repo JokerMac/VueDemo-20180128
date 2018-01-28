@@ -1,0 +1,8 @@
+#canvas{
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    padding: 100px 20px;
+    text-align: center;
+    border: solid 1px #333;
+}

@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VueDemo-2018-01-28</title>
+    <link rel="stylesheet" href="index.css">
     <script src="./lib/vue-v2.5.13.js"></script>
 </head>
+
 <body>
     <div id="app">
         {{test}}
-        <button v-on:click="helloWorld()">click it!</button>
-        {{hey()}}
+        <button v-on:click="helloWorld()" @dblclick="hey('man')">click it!</button>
+        <a v-bind:href="website">必应</a>
+        <p v-html="websiteTag">这里往p标签里插入了a标签</p>
+
+        <div id="canvas" v-on:mousemove="updateXY(event)">
+            {{mouseX}},{{mouseY}}
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>
+
 </html>
