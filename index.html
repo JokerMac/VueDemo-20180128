@@ -13,13 +13,19 @@
 <body>
     <div id="app">
         {{test}}
-        <button v-on:click="helloWorld()" @dblclick="hey('man')">click it!</button>
+        <button v-on:click.once="helloWorld()" @dblclick="hey('man')">click it!</button>
         <a v-bind:href="website">必应</a>
         <p v-html="websiteTag">这里往p标签里插入了a标签</p>
 
         <div id="canvas" v-on:mousemove="updateXY(event)">
             {{mouseX}},{{mouseY}}
+            <p>事件修饰符的使用：</p>
+            <span v-on:mousemove.stop="">Stop Moving阻止事件冒泡，所以div上的mousemove事件不会被触发。</span>
+            <a v-on:click.prevent="" href="https://cn.bing.com/">此a标签的默认事件被prevent修饰符阻止了。</a>
         </div>
+
+        <p>键盘事件：链式修饰符（要同时松开alt和enter键才会触发keyUp方法。）</p>
+        <input type="text" v-on:keyup.alt.enter="keyUp()">
     </div>
     <script src="./index.js"></script>
 </body>

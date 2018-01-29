@@ -9,7 +9,7 @@ var vm = new Vue({
     },
     methods: {
         helloWorld: function () {
-            // console.error('hello wolrd');
+            console.error('hello wolrd');
         },
         hey: function (a) {
             console.warn('hey ' + a);
@@ -17,6 +17,9 @@ var vm = new Vue({
         updateXY: function (event) {
             this.mouseX = event.offsetX;
             this.mouseY = event.offsetY;
+        },
+        keyUp: function () {
+            console.error("松开按键了!");
         }
     }
 });
