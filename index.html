@@ -26,6 +26,13 @@
 
         <p>键盘事件：链式修饰符（要同时松开alt和enter键才会触发keyUp方法。）</p>
         <input type="text" v-on:keyup.alt.enter="keyUp()">
+
+        <p v-bind:class="{changeColor:changeColor}">测试v-bind:class</p>
+        <button v-on:click="changeColor=!changeColor">改变颜色</button>
+
+        <p>使用v-for遍历数组和对象</p>
+        <p>v-for="(user,index) in userArr"</p>
+        <p>v-for="(val,key) in userObj"</p>
     </div>
     <script src="./index.js"></script>
 </body>

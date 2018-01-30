@@ -5,7 +5,8 @@ var vm = new Vue({
         website: 'https://cn.bing.com/',
         websiteTag: '<a href="www.baidu.com">百度一下</a>',
         mouseX: 0,
-        mouseY: 0
+        mouseY: 0,
+        changeColor: false
     },
     methods: {
         helloWorld: function () {
@@ -23,3 +24,5 @@ var vm = new Vue({
         }
     }
 });
+
+V
