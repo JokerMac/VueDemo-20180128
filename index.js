@@ -1,3 +1,21 @@
+Vue.component('test-component',{
+    template:`
+    <div>
+        <p>一段文本{{name}}</p>
+        <button v-on:click="changeName()">切换名字</button>
+    </div>`,
+    data:function(){
+        return {
+            name:"你好"
+        };
+    },
+    methods:{
+        changeName:function(){
+            this.name="新的名字。";
+        }
+    }
+});
+
 var vm = new Vue({
     el: '#app',
     data: {
@@ -24,5 +42,3 @@ var vm = new Vue({
         }
     }
 });
-
-V
